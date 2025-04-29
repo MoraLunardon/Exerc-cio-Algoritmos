@@ -1,0 +1,152 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+    float notas[15];
+    int contador = 1, contagemnota = -1, contagemdnv = 1;
+    string sn, alunos[5], aprovacao[5];
+    
+    while (contador <= 5 and sn != "n" and sn != "N") {
+        cout<<"\n\nDigite o nome do "<<contador<<"ﾂｰ aluno: ";
+        cin>>alunos[contador - 1];
+        cout<<"Digite as  3 notas de "<<alunos[contador - 1]<<": \n";
+        while (contagemdnv <= 3) {
+            cin>>notas[contagemnota + 1];
+            contagemnota++;
+            contagemdnv++;
+        }
+        contagemdnv = 1;
+        contador++;
+        cout<<"\n\nContinuar?[S/N]";
+        cin>>sn;
+    }
+    
+    if ((notas[0] + notas[1] + notas[2]) / 3 >= 7) {
+        aprovacao[0] = "Aprovado";
+    } else {
+        aprovacao[0] = "Reprovado";
+    }
+    
+    if ((notas[3] + notas[4] + notas[5]) / 3 >= 7) {
+        aprovacao[1] = "Aprovado";
+    } else {
+        aprovacao[1] = "Reprovado";
+    }
+    
+    if ((notas[6] + notas[7] + notas[8]) / 3 >= 7) {
+        aprovacao[2] = "Aprovado";
+    } else {
+        aprovacao[2] = "Reprovado";
+    }
+    
+    if ((notas[9] + notas[10] + notas[11]) / 3 >= 7) {
+        aprovacao[3] = "Aprovado";
+    } else {
+        aprovacao[3] = "Reprovado";
+    }
+    
+    if ((notas[12] + notas[13] + notas[14]) / 3 >= 7) {
+        aprovacao[4] = "Aprovado";
+    } else {
+        aprovacao[4] = "Reprovado";
+    }
+    
+
+    if (contador == 2) {
+        
+        cout<<setprecision(2);
+        cout<<setw(10)<<"ALUNO"<<setw(10)<<"N1"<<setw(10)<<"N2"<<setw(10)<<"N3"<<setw(10)<<"Mﾃ吋IA";
+        cout.width(15);
+        cout<<"       SITUAﾃ�ﾃグ"<<endl;
+        
+        cout<<setw(10)<<alunos[0]<<setw(10)<<notas[0]<<setw(10)<<notas[1]<<setw(10)<<notas[2]<<setw(10)<<(notas[0] + notas[1] + notas[2]) / 3;
+        cout.width(15);
+        cout<<aprovacao[0]<<endl;
+        
+    } else if (contador == 3) {
+        
+        cout<<setprecision(2);
+        cout<<setw(10)<<"ALUNO"<<setw(10)<<"N1"<<setw(10)<<"N2"<<setw(10)<<"N3"<<setw(10)<<"Mﾃ吋IA";
+        cout.width(15);
+        cout<<"       SITUAﾃ�ﾃグ"<<endl;
+        
+        cout<<setw(10)<<alunos[0]<<setw(10)<<notas[0]<<setw(10)<<notas[1]<<setw(10)<<notas[2]<<setw(10)<<(notas[0] + notas[1] + notas[2]) / 3;
+        cout.width(15);
+        cout<<aprovacao[0]<<endl;
+        
+        cout<<setw(10)<<alunos[1]<<setw(10)<<notas[3]<<setw(10)<<notas[4]<<setw(10)<<notas[5]<<setw(10)<<(notas[3] + notas[4] + notas[5]) / 3;
+        cout.width(15);
+        cout<<aprovacao[1]<<endl;
+        
+    } else if (contador == 4) {
+        
+        cout<<setprecision(2);
+        cout<<setw(10)<<"ALUNO"<<setw(10)<<"N1"<<setw(10)<<"N2"<<setw(10)<<"N3"<<setw(10)<<"Mﾃ吋IA";
+        cout.width(15);
+        cout<<"       SITUAﾃ�ﾃグ"<<endl;
+        cout<<setw(10)<<alunos[0]<<setw(10)<<notas[0]<<setw(10)<<notas[1]<<setw(10)<<notas[2]<<setw(10)<<(notas[0] + notas[1] + notas[2]) / 3;
+        cout.width(15);
+        cout<<aprovacao[0]<<endl;
+        cout<<setw(10)<<alunos[1]<<setw(10)<<notas[3]<<setw(10)<<notas[4]<<setw(10)<<notas[5]<<setw(10)<<(notas[3] + notas[4] + notas[5]) / 3;
+        cout.width(15);
+        cout<<aprovacao[1]<<endl;
+        cout<<setw(10)<<alunos[2]<<setw(10)<<notas[3]<<setw(10)<<notas[4]<<setw(10)<<notas[5]<<setw(10)<<(notas[3] + notas[4] + notas[5]) / 3;
+        cout.width(15);
+        cout<<aprovacao[1]<<endl;
+        
+    } else if (contador == 5) {
+        
+        cout<<setprecision(2);
+        cout<<setw(10)<<"ALUNO"<<setw(10)<<"N1"<<setw(10)<<"N2"<<setw(10)<<"N3"<<setw(10)<<"Mﾃ吋IA";
+        cout.width(15);
+        cout<<"       SITUAﾃ�ﾃグ"<<endl;
+        
+        cout<<setw(10)<<alunos[0]<<setw(10)<<notas[0]<<setw(10)<<notas[1]<<setw(10)<<notas[2]<<setw(10)<<(notas[0] + notas[1] + notas[2]) / 3;
+        cout.width(15);
+        cout<<aprovacao[0]<<endl;
+        
+        cout<<setw(10)<<alunos[1]<<setw(10)<<notas[3]<<setw(10)<<notas[4]<<setw(10)<<notas[5]<<setw(10)<<(notas[3] + notas[4] + notas[5]) / 3;
+        cout.width(15);
+        cout<<aprovacao[1]<<endl;
+        
+        cout<<setw(10)<<alunos[2]<<setw(10)<<notas[6]<<setw(10)<<notas[7]<<setw(10)<<notas[8]<<setw(10)<<(notas[6] + notas[7] + notas[8]) / 3;
+        cout.width(15);
+        cout<<aprovacao[2]<<endl;
+        
+        cout<<setw(10)<<alunos[3]<<setw(10)<<notas[9]<<setw(10)<<notas[10]<<setw(10)<<notas[11]<<setw(10)<<(notas[9] + notas[10] + notas[11]) / 3;
+        cout.width(15);
+        cout<<aprovacao[1]<<endl;
+        
+    } else if (contador == 6) {
+        
+        cout<<setprecision(2);
+        cout<<setw(10)<<"ALUNO"<<setw(10)<<"N1"<<setw(10)<<"N2"<<setw(10)<<"N3"<<setw(10)<<"Mﾃ吋IA";
+        cout.width(15);
+        cout<<"       SITUAﾃ�ﾃグ"<<endl;
+        
+        cout<<setw(10)<<alunos[0]<<setw(10)<<notas[0]<<setw(10)<<notas[1]<<setw(10)<<notas[2]<<setw(10)<<(notas[0] + notas[1] + notas[2]) / 3;
+        cout.width(15);
+        cout<<aprovacao[0]<<endl;
+        
+        cout<<setw(10)<<alunos[1]<<setw(10)<<notas[3]<<setw(10)<<notas[4]<<setw(10)<<notas[5]<<setw(10)<<(notas[3] + notas[4] + notas[5]) / 3;
+        cout.width(15);
+        cout<<aprovacao[1]<<endl;
+        
+        cout<<setw(10)<<alunos[2]<<setw(10)<<notas[6]<<setw(10)<<notas[7]<<setw(10)<<notas[8]<<setw(10)<<(notas[6] + notas[7] + notas[8]) / 3;
+        cout.width(15);
+        cout<<aprovacao[2]<<endl;
+        
+        cout<<setw(10)<<alunos[3]<<setw(10)<<notas[9]<<setw(10)<<notas[10]<<setw(10)<<notas[11]<<setw(10)<<(notas[9] + notas[10] + notas[11]) / 3;
+        cout.width(15);
+        cout<<aprovacao[1]<<endl;
+        
+        cout<<setw(10)<<alunos[4]<<setw(10)<<notas[12]<<setw(10)<<notas[13]<<setw(10)<<notas[14]<<setw(10)<<(notas[12] + notas[13] + notas[14]) / 3;
+        cout.width(15);
+        cout<<aprovacao[1]<<endl;
+    } 
+        
+    return 0;
+}
